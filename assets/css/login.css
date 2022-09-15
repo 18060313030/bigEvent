@@ -1,0 +1,67 @@
+body {
+  height: 100vh;
+  background: url(/assets/images/login_bg.jpg) no-repeat center / cover;
+}
+
+/* 面板水平垂直居中 */
+.panel {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 310px;
+  background-color: #fff;
+}
+
+/* 标题 */
+.panel .title {
+  height: 60px;
+  background: url(/assets/images/login_title.png) no-repeat center;
+}
+
+/* 登录框距离顶部标题20像素 */
+.login-wrapper {
+  margin-top: 20px;
+}
+
+/* 整体框内缩 */
+.wrapper-normal {
+  padding: 0 20px;
+}
+
+.layui-form-item {
+  position: relative;
+}
+
+/* 图表位置 */
+.icon {
+  position: absolute;
+  top: 25%;
+  left: 3%;
+}
+
+/* 输入框左边间距 */
+.layui-input {
+  padding-left: 30px;
+}
+
+/* 右浮动 */
+.link-right {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+/* 隐藏注册框 */
+.show-wrapper {
+  display: none;
+}
+
+.change-panel {
+  color: rgb(135, 206, 235);
+}
+
+.change-panel:hover {
+  color: rgb(64, 189, 238);
+}
