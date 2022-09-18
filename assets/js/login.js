@@ -29,7 +29,6 @@ $(".register-wrapper .layui-form").submit(function (e) {
       // 弹出提示
       if (res.status !== 0) return layer.msg(res.message, { icon: 5 });
       layer.msg("注册成功", { icon: 1, time: 1000 }, function () {
-        console.log(1);
         // 清空表单
         $(self)[0].reset();
         // 跳转登录页面
@@ -48,11 +47,11 @@ $(".login-wrapper .layui-form").submit(function (e) {
     method: "post",
     data: params,
     success(res) {
-      console.log(res);
+      // console.log(res);
       if (res.status !== 0) return layer.msg(res.message, { icon: 5 });
       layer.msg("登录成功", { icon: 1, time: 1000 }, function () {
-        localStorage.setItem("token", res.token);
-        location.href = "/index.html";
+        localStorage.setItem("token", res.token); // 保存token
+        location.href = "/index.html"; // 跳转页面
       });
     },
   });

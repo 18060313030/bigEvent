@@ -9,8 +9,9 @@
 /* 左侧导航栏头像 */
 .avatar-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  margin-left: 20px !important;
   width: 150px;
 }
 .avatar {
@@ -28,6 +29,8 @@
   background-color: rgb(135, 206, 235);
 }
 .avatar-name {
+  margin-left: 5px;
+  font-size: 12px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

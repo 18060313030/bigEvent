@@ -4,4 +4,17 @@
 $.ajaxPrefilter(function (options) {
   // 在发起真正的 Ajax 请求之前，统一拼接请求的根路径
   options.url = "http://big-event-api-t.itheima.net" + options.url;
+
+  // 封装请求头
+  // if (options.url.indexOf("/my") > -1) {
+  //   options.headers = options.headers || {};
+  //   options.headers = {
+  //     ...options.headers,
+  //     Authorization: localStorage.getItem("token") || "",
+  //   };
+  // }
+  if (options.url.indexOf("/my") > -1) {
+    options.headers = options.headers || {};
+    options.headers["Authorization"] = localStorage.getItem("token") || "";
+  }
 });
